@@ -1,0 +1,34 @@
+package Homework;
+import java.text.NumberFormat;
+public class test2 
+{
+		public static double Investment;
+		public static double Interest;
+		public static int Years;
+		public static double fvalue;
+	// database processing
+	public static test1 getProduct()
+		{
+		//get the product object
+		test1 product = new test1();			
+					
+		int years = Years;
+		double yearlyinvestment = (Investment * 12);
+		double futurevalue = ((yearlyinvestment) * (Interest/100) + Investment);	
+		double total=0;
+		for (int i=0;i<years;i++)
+			{		
+		futurevalue = ((yearlyinvestment) * (Interest/100) + yearlyinvestment);		
+		yearlyinvestment = futurevalue;
+		total =total+  futurevalue;
+			}
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		String fvalue = currency.format(total);
+		test1.fvalue = total;
+		//System.out.println(total);
+		System.out.println(product.getpriceformatted(fvalue));
+	//	System.out.println(fvalue);
+
+	return product;
+		}
+}
