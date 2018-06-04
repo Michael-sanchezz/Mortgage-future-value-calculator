@@ -1,0 +1,36 @@
+package Homework;
+import java.util.Scanner;
+import java.text.NumberFormat;
+public  class test3 {
+	public static void main(String[] args) 
+	{
+		System.out.println("mortgage interest 3 tier");
+		System.out.println();
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter program? y/n");
+		String choice = sc.nextLine();
+		if (choice.equalsIgnoreCase("y"))
+		{
+		while (choice.equalsIgnoreCase("y"))
+			{
+			double Investment = 0;
+			System.out.println("enter investment ");
+			Investment =  sc.nextDouble() ;		
+			test2.Investment = Investment;
+			
+			System.out.println("yearly interest rate ");
+			double interest = sc.nextDouble();
+			test2.Interest = interest;
+			
+			System.out.println("enter number of years ");
+			int years = sc.nextInt();
+			test2.Years = years;
+			test1 Invest = test2.getProduct();			
+			System.out.println("continue ? y/n");
+			choice = sc.next();
+			}
+		}
+		System.out.println("application ended");
+	}
+}
