@@ -1,0 +1,52 @@
+package Homework;
+import java.text.NumberFormat;
+public class test1 {
+	private double Investment;
+	private double Years;
+	private double Interest;
+	public static double fvalue;
+	//Constructor creates instance of the class and initialize the structures
+	public test1() 
+	{
+		Investment = 0;
+		Years = 0;
+		Interest = 0;	
+		fvalue = 0;
+	}
+	//the set and get methods
+	public void setInvestment(double Investment)
+	{
+		this.Investment = Investment;//setter
+		
+	}
+	public double getInvestment()
+	{
+		return Investment;//getter
+	}
+	public void setYears(double Years)
+	{
+		this.Years = Years;
+	}
+	public double getYears()
+	{
+		return Years;
+	}
+	public void setInterest(double Interest)
+	{
+		this.Interest = Interest;
+	}
+	public double getInterest()
+	{
+		return Interest;
+	}
+	public void setfvalue(double fvalue)
+	{
+		this.fvalue = fvalue;
+	}
+	public static String getpriceformatted(String value)
+	{
+		NumberFormat currency= NumberFormat.getCurrencyInstance();
+		 value = currency.format(fvalue);
+		return value;//can also use NumberFormat.getCurrencyInstance().format(fvalue));
+	}
+	}
